@@ -66,8 +66,8 @@ def heart_tracks
     join tracks
       on albums.asin = tracks.album
     where tracks.song like '%Heart%'
-    group by albums.title
-    order by count(*) desc, albums.title asc
+    group by albums.asin
+    order by count(*) desc, albums.title
   SQL
 end
 
@@ -97,18 +97,12 @@ def song_title_counts
   # Select the song names that appear on more than two albums. Also select the
   # COUNT of times they show up.
   execute(<<-SQL)
-    select tracks.song, count(*)
-    from albums
-    join tracks
-      on tracks.album = albums.asin
-    join (
-      select song, count(*)
-      from tracks
-      group by song
-      having count(*) > 2
-    ) as duplicate_song
-    on duplicate_song.song = tracks.song
-    group by tracks.song
+  select tracks.song, count(distinct albums.asin)
+  from albums
+  join tracks
+  on tracks.album = albums.asin
+  group by tracks.song
+  having count(distinct albums.asin) > 2
   SQL
 end
 
@@ -117,6 +111,13 @@ def best_value
   # pence. Find the good value albums - show the title, the price and the number
   # of tracks.
   execute(<<-SQL)
+    select albums.title, albums.price, count(*)
+    from albums
+    join tracks
+    on tracks.album = albums.asin
+    group by albums.title, albums.price
+    having albums.price is not null
+    and albums.price/count(*) < 0.5
   SQL
 end
 
@@ -125,6 +126,17 @@ def top_track_counts
   # tracks. List the top 10 albums. Select both the album title and the track
   # count, and order by both track count and title (descending).
   execute(<<-SQL)
+    select albums.title, top_10.count
+    from albums
+    join (
+      select album, count(*)
+      from tracks
+      group by album
+      order by count(*) desc
+    ) as top_10
+    on albums.asin = top_10.album
+    order by top_10.count desc, albums.title desc
+    limit 10
   SQL
 end
 
@@ -132,6 +144,17 @@ def rock_superstars
   # Select the artist who has recorded the most rock albums, as well as the
   # number of albums. HINT: use LIKE '%Rock%' in your query.
   execute(<<-SQL)
+    select most_rock.artist, max(count)
+    from (
+      select albums.artist, max(count(distinct albums.title))
+      from albums
+      join styles
+      on styles.album = albums.asin
+      where styles.style like '%Rock%'
+      group by albums.artist
+      order by count(*) desc
+      limit 10
+    ) as most_rock
   SQL
 end
 
