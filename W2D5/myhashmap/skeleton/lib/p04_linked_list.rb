@@ -25,9 +25,7 @@ class Node
 end
 
 class LinkedList
-  #XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   include Enumerable
-  #XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
   def initialize
     @head = Node.new
