@@ -1,4 +1,5 @@
 require '03_associatable'
+require 'byebug'
 
 describe 'AssocOptions' do
   describe 'BelongsToOptions' do
@@ -65,7 +66,7 @@ describe 'AssocOptions' do
       options = HasManyOptions.new('cats', 'Human')
       expect(options.model_class).to eq(Cat)
     end
-    
+
     it '#table_name returns table name of associated object' do
       options = BelongsToOptions.new('human')
       expect(options.table_name).to eq('humans')
@@ -110,7 +111,7 @@ describe 'Associatable' do
     it 'fetches `human` from `Cat` correctly' do
       expect(breakfast).to respond_to(:human)
       human = breakfast.human
-
+      # debugger
       expect(human).to be_instance_of(Human)
       expect(human.fname).to eq('Devon')
     end
@@ -125,6 +126,7 @@ describe 'Associatable' do
 
     it 'returns nil if no associated object' do
       stray_cat = Cat.find(5)
+      # debugger
       expect(stray_cat.human).to eq(nil)
     end
   end
@@ -150,6 +152,7 @@ describe 'Associatable' do
 
     it 'fetches `humans` from `House`' do
       expect(ned_house).to respond_to(:humans)
+      # debugger
       humans = ned_house.humans
 
       expect(humans.length).to eq(1)

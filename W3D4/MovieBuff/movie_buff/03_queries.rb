@@ -47,11 +47,9 @@ def starring(whazzername)
 
   # ex. "Sylvester Stallone" is like "sylvester" and "lester stone" but
   # not like "stallone sylvester" or "zylvester ztallone"
-  search_name = "%"+ whazzername.split('').join('%') + '%'
+  search_name = "%" + whazzername.delete(' ').chars.join('%') + '%'
 
-  Movie
-    .joins(:actors)
-    .where("actors.name like #{search_name}")
+  Movie.joins(:actors).where("lower(actors.name) like '#{search_name}'")
 end
 
 def longest_career
@@ -59,5 +57,11 @@ def longest_career
   # (the greatest time between first and last movie).
   # Order by actor names. Show each actor's id, name, and the length of
   # their career.
-
+  Actor
+    .select(:id, :name, '(max(yr) - min(yr)) as career')
+    .joins(:movies)
+    .group(:id)
+    .order('career desc')
+    .order('name')
+    .limit(3)
 end
