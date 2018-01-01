@@ -1,2 +1,0 @@
-# projects
-App Academy Projects
