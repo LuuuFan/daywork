@@ -6,12 +6,13 @@ class ArtworksController < ApplicationController
     # render json: params
     if params.has_key?(:artist_id)
       artworks = Artwork.where(artist_id: params[:artist_id])
+      render json: artworks
     elsif params.has_key?(:viewer_id)
       artworks = Artwork.joins(:artworks_shares).where("artworks_shares.viewer_id = #{params[:viewer_id]}")
+      render json: artworks
     else
       render plain: 'You do not have permission to see all the artworks'
     end
-    render json: artworks
   end
 
   def show
