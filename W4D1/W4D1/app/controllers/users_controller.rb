@@ -1,8 +1,20 @@
 class UsersController < ApplicationController
 
   def index
-    users = User.all
-    render json: users
+    # render json: params
+    if params[:query]
+      # params.has_key(:username)
+      # users = User.where(username: params[:username])
+      users = User.where('username like ?', "%#{params[:query]}%")
+      if !users.empty?
+        render json: users
+      else
+        render plain: 'No such user'
+      end
+    else
+      users = User.all
+      render json: users
+    end
     # render plain: "I'm in the index action!"
   end
 

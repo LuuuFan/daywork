@@ -2,10 +2,10 @@ class CommentsController < ApplicationController
 
   def index
     if params.has_key?(:user_id)
-      comments = User.joins(:comments).where("comments.user_id = #{params[:user_id]}")
+      comments = Comment.joins(:user).where("users.id = #{params[:user_id]}")
       render json: comments
     elsif params.has_key?(:artwork_id)
-      comments = Artwork.joins(:comments).where("comments.artwork_id = #{params[:artwork_id]}")
+      comments = Comment.joins(:artwork).where("artworks.id = #{params[:artwork_id]}")
       render json: comments
     else
       render plain: 'You do not have permission to check all comments'
