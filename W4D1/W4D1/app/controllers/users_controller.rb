@@ -38,7 +38,8 @@ class UsersController < ApplicationController
     user = User.find_by(id: params[:id])
     if user
       if user.update(user_params)
-        redirect_to user_url(user)
+        render json: user
+        # redirect_to user_url(user)
       else
         render json: user.errors.full_messages, status: 422
       end
