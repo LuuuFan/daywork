@@ -20,4 +20,22 @@ class CatRentalRequest < ApplicationRecord
   def does_not_overlap_approved_request
     !overlapping_approved_requests.exists?
   end
+
+  def approve!
+    self.status = 'APPROVED'
+    overlapping_pending_requests.each do |request|
+      request.deny!
+      request.save
+    end
+    self.save
+  end
+
+  def overlapping_pending_requests
+    overlapping_requests.where(status: 'PENDING').where.not(id: self.id)
+  end
+
+  def deny!
+    self.status = 'DENIED'
+  end
+
 end

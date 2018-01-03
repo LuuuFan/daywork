@@ -1,2 +1,25 @@
 <%= render "cat", cat: @cat %>
 <%= button_to "Delete", cat_url, method: :delete %>
+
+<% if !@cat.cat_rental_requests.empty? %>
+  <li>Rental Request:
+    <ol>
+    <% @cat.cat_rental_requests.order(:start_date).each do |request| %>
+      <li>
+      Start: <%= request.start_date %>
+      <br>
+      End: <%= request.end_date %>
+      <br>
+      <% if request.status == 'PENDING' %>
+        <%= button_to "APPROVE", approve_cat_rental_request_url(request) %>
+        <%= button_to "DENY", deny_cat_rental_request_url(request) %>
+        <br>
+      <% else %>
+         Status: <%= request.status %>
+         <br>
+      <% end %>
+      </li>
+    <% end %>
+    </ol>
+  </li>
+<% end %>
