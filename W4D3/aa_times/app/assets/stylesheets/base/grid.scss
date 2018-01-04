@@ -16,21 +16,27 @@ with a class attribute containing 'col-' */
   padding-right: 0;
 }
 
-.col-1 {
-  width: 20%;
+.col-1{
+  width: 70%;
 }
 
-.col-2{
-  width: 50%;
+.col-3 {
+  width: 30%;
+}
+
+.col-1-1 {
+  float: left;
+  width: 30%;
+}
+
+.col-1-2{
+  width: 70%;
 }
 
 iframe {
   width: 100%;
 }
 
-.col-3 {
-  width: 30%;
-}
 
 .col-3-1 {
   float: left;
@@ -46,4 +52,14 @@ iframe {
   [class*='col-'] {
     width: 100%
   }
+
+  .sections_nav ul li {
+    display: none;
+  }
+
+  .right-nav ul li:nth-child(-n+2){
+    display: none;
+  }
+
+  
 }
