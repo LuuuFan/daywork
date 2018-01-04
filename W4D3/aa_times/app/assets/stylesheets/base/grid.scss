@@ -57,9 +57,14 @@ iframe {
     display: none;
   }
 
-  .right-nav ul li:nth-child(-n+2){
+  // .right-nav ul li:nth-child(-n+2){
+  //   display: none;
+  // }
+
+  #subscribe, #login {
     display: none;
   }
-
-  
+  .left-nav {
+    margin: 0;
+  }
 }

@@ -13,5 +13,3 @@ $(() => $('#overlay').on('click', toggleModal));
 
 // Add click listener to close button
 $(() => $('.close').on('click', toggleModal));
-
-

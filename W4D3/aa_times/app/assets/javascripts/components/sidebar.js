@@ -19,5 +19,3 @@ $(() => $('#sections-sidebar-btn').on('click', toggleSidebar));
 // Close an expanded sidebar after 1 second if mouse leaves sidebar element
 // Incomplete feature because sidebar does not remain open if mouse reenters element
 $(() => $('#sections-sidebar').mouseleave(toggleSideBarIfExpanded));
-
-

@@ -1,0 +1,55 @@
+.overlay {
+  // opacity: 0;
+  display: none;
+  justify-content: flex-end;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1.5px solid $light-gray;
+  align-items: center;
+  justify-content: space-around;
+  // box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.09);
+}
+
+.serach{
+  display: flex;
+  justify-content: space-between;
+  height: 50%;
+  width: 60%;
+  box-shadow: -1px 4px 6px 1px rgba(0, 0, 0, 0.09);
+  border-radius: 3px;
+  border: 1px solid $light-gray;
+}
+
+.overlay input {
+  font-family: "times new roman";
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+}
+
+#search-btn {
+  display: flex;
+  background-color: white;
+  color: $gray;
+  border: 1px solid $light-gray;
+  border-radius: 3px;
+  text-align: center;
+  margin: 0px;
+  padding: 10px;
+}
+
+#close-btn {
+  color: white;
+  background-color: $light-gray;
+  border-radius: 15px;
+  margin: 0;
+  font-size: 8px;
+  font-weight: 900;
+  font-style: bold;
+  padding: 2px;
+  font-family: arial;
+}
+
+#close-btn:hover {
+  background-color: $gray;
+}

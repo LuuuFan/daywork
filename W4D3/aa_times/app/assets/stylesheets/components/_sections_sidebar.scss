@@ -1,0 +1,90 @@
+// #sections_sidebar {
+//   opacity: 0;
+// }
+
+.sections_sidebar {
+  opacity: 0;
+  position: fixed;
+  background-color: white;
+  box-shadow: -1px 4px 6px 1px rgba(0, 0, 0, 0.09);
+  height: 100%;
+  z-index:1000;
+  left: 0;
+  width: 200px;
+  font-size: 12px;
+}
+
+.expand {
+  opacity: 1;
+}
+
+.category {
+  text-transform: uppercase;
+  padding: 5px;
+  margin: 13px 5px 5px 13px;
+}
+
+.category span {
+  color: $gray;
+  font-weight: 999;
+}
+
+.expand ul li {
+  padding: 13px;
+  display: block;
+  margin-right: 8px;
+  margin-left: 8px;
+  border-radius: 2px;
+  text-transform: capitalize;
+}
+
+.expand ul li:hover {
+  background-color: $lightest-blue;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown > ul {
+  display: none;
+  position: absolute;
+  /* use top, left, right, bottom to position */
+  top: -50px;
+  left: 170px;
+  z-index:1000;
+  background-color: white;
+  opacity: 1;
+  border: 1px solid $light-gray;
+  border-radius: 3px;
+  width: 230px;
+  height: 250px;
+  text-transform: capitalize;
+  box-shadow: -1px 4px 6px 1px rgba(0, 0, 0, 0.09);
+}
+
+.dropdown:hover > ul {
+  /* applies the following style to uls inside .dropdown */
+  /* but only when .dropdown is being hovered over */
+  display: block;
+}
+
+li.dropdown  {
+  position: relative;
+}
+li.dropdown :after,
+li.dropdown :before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 40%;
+  border-left: 5px solid gray;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  width: 0;
+  height: 0;
+}
+li.dropdown :after {
+  right: 2px;
+  border-left: 5px solid white;
+  z-index: 1;
+}
