@@ -1,0 +1,108 @@
+.signup {
+  // width: 100%;
+  margin: 20px;
+}
+
+.article li {
+  list-style-type: disc;
+  padding: 5px;
+  font-family: "times new roman";
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.article {
+  list-style-type: disc;
+  padding: 0px;
+  font-family: "times new roman";
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.thumbnail {
+  height: 100px;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.big-title {
+  text-decoration: underline;
+  // font: italic bold 80px;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 950;
+  font-family: serif;
+}
+
+.title {
+  font-size: 14px;
+  font-family: "times new roman";
+  font-weight: 900;
+}
+
+.author{
+  padding-top: 3px;
+  padding-bottom: 4px;
+  color: $gray;
+  font-family: "times new roman";
+  font-weight: 850;
+  font-size: 11px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.comments {
+  color: $blue;
+  padding: 5px;
+  font-size: 11px;
+  font-family: $serif;
+}
+
+.subscribe {
+  color: $gray;
+  font-size: 9px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#opinion{
+  text-align: center;
+}
+
+.list li {
+  list-style-type: disc;
+  padding: 1px;
+  font-family: "times new roman";
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.guide {
+  font-family: "times new roman";
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px;
+}
+
+.signup {
+  border: 1px solid $gray;
+  border-radius: 2px;
+  width: 100%;
+  display: flex;
+}
+
+.signup button {
+  
+}
+
+.signup input {
+  color: $gray;
+  padding: 0;
+}

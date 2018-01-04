@@ -1,19 +1,49 @@
 .col {
-  // ...
+  // float: left;
+  box-sizing: border-box;
+  // padding: 20px;
 }
 
 /* Attribute selector targeting all elements
 with a class attribute containing 'col-' */
 [class*='col-'] {
-  // ...
+  float: left;
+  padding-right: 20px;
+  padding-top: 20px;
 }
 
 [class*='col-']:last-of-type {
-  // ...
+  padding-right: 0;
+}
+
+.col-1 {
+  width: 20%;
+}
+
+.col-2{
+  width: 50%;
+}
+
+iframe {
+  width: 100%;
+}
+
+.col-3 {
+  width: 30%;
+}
+
+.col-3-1 {
+  float: left;
+  width: 50%;
+}
+
+.col-3-2 {
+  float: left;
+  width: 50%;
 }
 
 @media all and (max-width: 1000px) {
   [class*='col-'] {
-    // width:
+    width: 100%
   }
 }
