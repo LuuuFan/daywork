@@ -5,30 +5,36 @@ html {
 	height: 100%;
 }
 
+h1, h2, h3, h4 {
+	font-family: 'Bungee Inline', cursive;
+}
+
 body {
+	// display: flex;
 	width: 80%;
-	margin: 0 auto;
-	font-family: $sans-serif;
+	margin: auto;
+	font-family: sans-serif;
 	font-size: 12px;
+	background-color: black;
 }
 
 button {
-	background-color: $light-blue;
-	border-color: $blue;
+	// background-color: $light-blue;
+	// border-color: $blue;
 	color: white;
 	font-weight: 1000;
 	padding: 5px;
 	border-radius: 3px;
 	transition: width 2s;
-	font-family: $sans-serif;
+	font-family: sans-serif;
 	text-transform: uppercase;
 	font-size: 9px;
 	text-align: center;
 }
 
 button:hover {
-	background-color: $blue;
-	border-color: $dark-blue;
+	// background-color: $blue;
+	// border-color: $dark-blue;
 }
 
 a:hover {
@@ -46,15 +52,5 @@ a:hover {
 hr {
 	border: 0;
 	height: 1px;
-	background-color: $light-gray;
-}
-
-.hr-top, .hr-bottom {
-	width: 100%;
-	margin: 0;
-}
-
-.hr-top {
-	height: 2px;
-	margin-bottom: 1px;
+	// background-color: $light-gray;
 }
