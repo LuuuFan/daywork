@@ -1,19 +1,20 @@
 # == Schema Information
 #
-# Table name: albums
+# Table name: tracks
 #
 #  id         :integer          not null, primary key
-#  band_id    :integer          not null
+#  album_id   :integer          not null
+#  ord        :integer          not null
 #  title      :string           not null
-#  year       :string           not null
-#  style      :string           not null
+#  lyrics     :text
+#  regular    :boolean          default(TRUE)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class AlbumTest < ActiveSupport::TestCase
+class TrackTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

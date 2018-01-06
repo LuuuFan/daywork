@@ -1,0 +1,8 @@
+
+<h4 class='sub-header'>New Note</h4>
+<form class="form" action="<%= track_notes_url(@track) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <textarea name="note[body]" rows="8" cols="40"></textarea>
+  <hr>
+  <input type="submit" value="Add Note">
+</form>

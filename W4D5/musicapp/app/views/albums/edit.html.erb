@@ -1,0 +1,45 @@
+<div class="bandname">
+  <h2>
+    Edit Ablum <%= @album.title %>
+  </h2>
+</div>
+
+<% if flash[:errors] %>
+  <h3>flash[:errors]</h3>
+<% end %>
+
+<form class="" action="<%= album_url %>" method="post">
+  <input type="hidden" name="_method" value="PATCH">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>
+    <label for="band_id">Name</label>
+    <select class="" name="album[band_id]">
+      <% @bands.each do |band| %>
+        <option value="<%= band.id %>" <%="selected" if @album.band_id == band.id %>><%= band.name %></option>
+      <% end %>
+    </select>
+  </p>
+  <hr>
+  <p>
+    <label for="title">Title
+      <input type="text" name="album[title]" value="<%= @album.title %>">
+    </label>
+  </p>
+  <hr>
+  <p>
+    <label for="year">Year
+      <input type="number" name="album[year]" min="1900" max="2099" value="<%= @album.year %>">
+    </label>
+  </p>
+  <hr>
+  <p>
+    <label for="style">Style</label>
+    <select name="album[style]">
+      <option value="">--Please select style for album--</option>
+      <option value="live" <%="selected" if @album.style == "live">>LIVE</option>
+      <option value="studio" <%="selected" if @album.style == "studio">>STUDIO</option>
+    </select>
+  </p>
+  <hr>
+  <input type="submit" value="Edit Album">
+</form>

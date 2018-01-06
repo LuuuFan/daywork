@@ -1,0 +1,35 @@
+<h1 class='page-header'>Edit <%= @track.title %></h1>
+
+<form class="form" action="<%= tracks_url %>" method="post">
+  <input type="hidden" name="_method" value="PATCH">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>
+    <label for="title"> Name</label>
+    <input type="text" name="track[title]" value="<%= @track.title %>">
+  </p>
+  <p>
+    <label for="album_id">Album</label>
+    <select class="" name="track[album_id]">
+      <option value="">--Please select album--</option>
+      <% @albums.each do |album| %>
+      <option value="<%= album.id  %>" <%= "selected" if @track.album_id = album.id %>><%= album.title %></option>
+      <% end %>
+    </select>
+  </p>
+  <p>
+    <label for="ord"> ORD</label>
+    <input type="number" name="track[ord]" value="<%= @track.ord %>">
+  </p>
+  <p>
+    <label for="regular">Regular</label>
+    <input type="radio" name="track[regular]" value=true <%= @track.regular ? "checked" : "" %>>
+    <label for="regular">Bonus</label>
+    <input type="radio" name="track[regular]" value=false <%= @track.regular ? "" : "checked" %>>
+  </p>
+  <p>
+    <label for="lyrics">Lyrics(Optional)</label>
+    <hr>
+    <textarea name="track[lyrics]" rows="10" cols="25" ><%= @track.lyrics %></textarea>
+  </p>
+  <input type="submit" value="Edit Track">
+</form>

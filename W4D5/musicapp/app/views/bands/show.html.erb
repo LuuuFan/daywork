@@ -1,6 +1,52 @@
-<div class="bandname">
-  <h2><%= @band.name %></h2>
-</div>
+<h1 class='page-header'><%= @band.name %></h1>\
+<h4 class='sub-header'>albums</h4>
+<ul class='main-list'>
+  <% @band.albums.each do |album| %>
+    <li>
+      <a href="<%= album_url(album) %>">
+        <p><%= album.title %></p>
+      </a>
+    </li>
+  <% end %>
+</ul>
 
+<!-- <table>
+  <tr>
+    <th>Title</th>
+    <th>year</th>
+    <th>style</th>
+    <th>band</th>
+  </tr>
+  <% @band.albums.each do |album| %>
+    <tr>
+      <th><%= link_to "#{album.title}", album_url(album) %></th>
+      <th><%= album.year %></th>
+      <th><%= album.style %></th>
+      <th><%= album.band.name %></th>
+    </tr>
+  <% end %>
+</table> -->
+<h4 class='sub-header'>Links</h4>
+<ul class='page-links'>
+  <li>
+    <a class='button' href="<%= new_band_album_url(@band) %>">
+      <p>New Album</p>
+    </a>
+  </li>
+  <li>
+    <a class='button' href="<%= edit_band_url(@band) %>">
+      <p>Edit Band</p>
+    </a>
+  </li>
+  <li>
+    <%= button_to 'Destroy Band', band_url(@band), method: :delete %>
+  </li>
+  <li>
+    <a class='button' href="<%= bands_url %>">
+      <p>All Bands</p>
+    </a>
+  </li>
+</ul>
 
-<%= button_to 'Edit Band', edit_band_url, method: :get %>
+<%#= link_to 'Edit Band', edit_band_url, method: :get %>
+<%#= button_to 'Add Album', new_band_album_url(@band), method: :get %>

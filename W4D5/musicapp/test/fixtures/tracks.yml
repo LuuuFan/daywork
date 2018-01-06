@@ -1,9 +1,13 @@
 # == Schema Information
 #
-# Table name: bands
+# Table name: tracks
 #
 #  id         :integer          not null, primary key
-#  name       :string           not null
+#  album_id   :integer          not null
+#  ord        :integer          not null
+#  title      :string           not null
+#  lyrics     :text
+#  regular    :boolean          default(TRUE)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

@@ -1,5 +1,11 @@
 <h1 class='page-header'>SIGN-IN</h1>
 <%= button_to 'Go to Sign-up!', new_user_url, method: :get %>
+<hr>
+<% if flash[:errors] %>
+<p><%= flash[:errors] %></p>
+<% end %>
+<hr>
+
 <form class="form" action="<%= session_url %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <p>

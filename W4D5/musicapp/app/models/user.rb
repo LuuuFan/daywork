@@ -17,6 +17,8 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true }
   after_initialize :ensure_session_token
 
+  has_many :notes
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)

@@ -1,0 +1,66 @@
+<h1 class='page-header'><%= @album.title %></h1>
+<% if @album.tracks.empty? %>
+  <p>This album has no tracks...yet!</p>
+<% end %>
+<!-- <hr>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Style</th>
+    <th>Band</th>
+  </tr>
+    <tr>
+      <th><%= @album.title %></th>
+      <th><%= @album.year %></th>
+      <th><%= @album.style %></th>
+      <th>
+        <%= link_to "#{@album.band.name}", band_url(@album.band) %>
+      </th>
+    </tr>
+</table>
+<hr> -->
+<ul class='main-list'>
+  <% @album.tracks.each do |track| %>
+  <li>
+    <a href="<%= track_url(track) %>">
+      <!-- <i class="fa fa-music" aria-hidden="true"></i> -->
+      <p>
+        <%= track.title %>
+      </p>
+    </a>
+  </li>
+  <% end %>
+</ul>
+
+<h4 class='sub-header'>Links</h4>
+<ul class='page-links'>
+  <li>
+    <a class='button' href="<%= new_album_track_url(@album) %>">
+      <p>New Track</p>
+    </a>
+  </li>
+  <li>
+    <a class='button' href="<%= edit_album_url(@album) %>">
+      <p>Edit Album</p>
+    </a>
+  </li>
+  <li>
+    <%= button_to 'Destroy Album', album_url(@album), method: :delete %>
+  </li>
+  <li>
+    <a class='button' href="<%= band_url(@album.band_id) %>">
+      <p>Back</p>
+    </a>
+  </li>
+</ul>
+
+<%#= button_to "Add New Track", new_album_track_url(@album), method: :get %>
+
+<!-- <div class="footer">
+
+  <%= button_to "Edit Album", edit_album_url, method: :get %>
+  <br>
+  <%= button_to "Delete Album", album_url, method: :delete %>
+
+</div> -->

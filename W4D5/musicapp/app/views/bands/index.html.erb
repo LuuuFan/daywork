@@ -1,15 +1,26 @@
 <% if @bands.empty? %>
   <h3>There is no band yet</h3>
 <% else %>
+  <h1 class='page-header'>Bands</h1>
+  <ul class='main-list'>
   <% @bands.each do |band| %>
-    <div class="bandname">
-      <h3>
-        <%= link_to "#{band.name}", band_url(band) %>
-        <!-- <%= band.name %> -->
-      </h3>
-    </div>
+    <li>
+      <a href="<%= band_url(band) %>">
+        <p>
+          <%= band.name %>
+        </p>
+      </a>
+    </li>
   <% end %>
+  </ul>
+  <hr>
 <% end %>
 
 
-<%= button_to "Add New Band", new_band_url, method: :get%>
+
+<h4 class='sub-header'>Links</h4>
+<ul class='page-links'>
+  <li>
+    <a href="<%= new_band_url %>" class='button'>New Band</a>
+  </li>
+</ul>

@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
+  # before_action :require_current_user
   def new
-    @user ||= User.new
-    render :new
+    if current_user
+      redirect_to bands_url
+    else
+      @user ||= User.new
+      render :new
+    end
   end
 
   def create

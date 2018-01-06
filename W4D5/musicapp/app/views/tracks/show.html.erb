@@ -1,0 +1,32 @@
+<h1 class='page-header'><%= @track.title %></h1>
+<!-- <h2><%= @track.ord %></h2>
+<h2>TITLE</h2>
+<h2><%= @track.title %></h2> -->
+<!-- <h2>LYRICS</h2> -->
+<p>
+  <i class="fa fa-music" aria-hidden="true"></i>
+</p>
+<hr>
+<pre class='lyrics'>
+<%= @track.lyrics %>
+</pre>
+
+<%= render 'notes/new' %>
+<%= render 'notes/index'%>
+
+<h4 class='sub-header'>Links</h4>
+<ul class='page-links'>
+  <li>
+    <a class='button' href="<%= edit_track_url(@track) %>">
+      <p>Edit track</p>
+    </a>
+  </li>
+  <li>
+    <%= button_to 'Destroy Track', track_url(@track), method: :delete %>
+  </li>
+  <li>
+    <a class='button' href="<%= album_url(@track.album_id) %>">
+      <p>Back</p>
+    </a>
+  </li>
+</ul>

@@ -10,19 +10,33 @@ html,body,div,span,h1,h2,h3,h4,a,p,ol,ul,li,form,label,article,aside,figure,figc
   box-sizing:content-box;
 }
 
+
 ol,ul{
-  list-style:none
+  list-style:none;
+}
+
+li{
+  list-style: none;
+  padding: 10px;
+}
+
+i{
+  /* padding-right: 5px; */
+  color: white;
 }
 
 img{
   width:100%
 }
 
-
+.note{
+  display: flex;
+}
 
 p,a,input{
   font-family:'Raleway', sans-serif;
   font-size:18px
+  /* color: white; */
 }
 
 p{
@@ -30,7 +44,8 @@ p{
 }
 
 a:hover,input[type='submit']:hover{
-  transition:.5s;color:white
+  transition:.5s;
+  color:yellow;
 }
 
 .button{
@@ -40,7 +55,7 @@ a:hover,input[type='submit']:hover{
   border:none;
   background-color:skyblue;
   color:#000;
-  margin-bottom:20px
+  margin-bottom: 20px;
 }
 
 .button:hover{
@@ -62,6 +77,26 @@ input[type="submit"]:hover{
   cursor:pointer
 }
 
+table, th, td {
+  border: 1px solid white;
+  color: white;
+}
+
+table {
+  width: 70%;
+}
+
+th {
+  text-transform: uppercase;
+}
+
+th, td{
+  text-align: center;
+  height: 15px;
+  font-family: arial;
+  font-weight: 700;
+}
+
 h1,h2,h3,h4{
   font-family:'Bungee Inline', cursive;
   color: white;
@@ -71,7 +106,12 @@ h1,h2,h3,h4{
   padding: 20px;
 }
 
-h3 a{
+hr{
+  padding: 10px;
+  border: 0px none;
+}
+
+h1,h4,h3,h2 a{
   font-family:'Bungee Inline', cursive;
   color: white;
   padding: 5px;
@@ -94,13 +134,18 @@ body{
   align-items:center
 }
 
-.nav{
+.footer{
+  display: flex;
+  /* float: left; */
+  justify-content: space-around;
+}
+
+/* .nav{
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   font-weight: 800;
-
-}
+} */
 
 
 .main-content .main-logo{
@@ -187,7 +232,12 @@ body{
   height:100%;
   width:100%;
   display:flex;
-  align-items:center
+  align-items:center;
+  /* text-align:center; */
+  /* margin: auto; */
+  /* color:black;
+  font-size:25px; */
+
 }
 
 .main-list li a p{
@@ -215,4 +265,10 @@ body{
 .note-item .note-item-info{
   display:flex;
   justify-content:space-between
+}
+
+.group:after {
+  content: '';
+  display: block;
+  clear: both;
 }

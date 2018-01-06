@@ -1,0 +1,45 @@
+<h2>Add New Track For<%= link_to "#{@album.title}", album_url(@album)  %></h2>
+
+<hr>
+
+<form class="" action="<%= tracks_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>
+    <label for="album_id">Album</label>
+    <select class="" name="track[album_id]">
+      <option value="">--Please select album--</option>
+      <% @albums.each do |album| %>
+      <option value="<%= album.id  %>" <%= "selected" if @album.id = album.id %>><%= album.title %></option>
+      <% end %>
+    </select>
+  </p>
+  <hr>
+  <p>
+    <label for="ord"> ORD
+      <input type="number" name="track[ord]" value="">
+    </label>
+  </p>
+  <hr>
+  <p>
+    <label for="title"> TITLE
+      <input type="text" name="track[title]" value="">
+    </label>
+  </p>
+  <hr>
+  <p>
+    <label for="regular">Regular
+      <input type="radio" name="track[regular]" value=true checked>
+    </label>
+    <label for="regular">Bonus
+      <input type="radio" name="track[regular]" value=false>
+    </label>
+  </p>
+  <hr>
+  <p>
+    <label for="lyrics">Lyrics(Optional)</label>
+    <hr>
+    <textarea name="track[lyrics]" rows="10" cols="25"></textarea>
+  </p>
+  <hr>
+  <input type="submit" value="Add New Track">
+</form>

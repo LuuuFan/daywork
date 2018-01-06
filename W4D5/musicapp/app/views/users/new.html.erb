@@ -1,16 +1,22 @@
 <h1 class='page-header'>New User</h1>
+
 <%= button_to 'Go to sign-in', new_session_url, method: :get %>
+<hr>
+<% if flash[:errors] %>
+<p><%= flash[:errors] %></p>
+<% end %>
+<hr>
 <form class="form" action="<%= users_url %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <p>
     <label for="new-user-email">Email</label>
     <input id="new-user-email" type="text" name="user[username]" value="">
   </p>
-
+  <hr>
   <p>
     <label for="new-user-password">Password</label>
     <input id="new-user-password" type="password" name="user[password]" value="">
   </p>
-
+  <hr>
   <input type="submit" value="Submit">
 </form>

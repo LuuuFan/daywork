@@ -1,0 +1,13 @@
+<h4 class='sub-header'>Notes</h4>
+<% @track.notes.each do |note| %>
+<div class="note-item">
+  <div class="note-item-info">
+    <p>
+      <%= note.body %>
+    </p>
+    <% if note.user_id = current_user.id %>
+    <%= button_to 'Delete', note_url(note), method: :delete %>
+    <% end %>
+  </div>
+</div>
+<% end %>

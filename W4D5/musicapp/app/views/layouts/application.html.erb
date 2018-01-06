@@ -6,22 +6,22 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous"> -->
   </head>
 
   <body>
-    <header>
-      <div class="nav">
-        <% if current_user %>
-          <p>Hello, <%= current_user.username %></p>
-          <%= link_to 'Log Out', session_url %>
-          <!-- <%= button_to 'Log Out', session_url, method: :delete %> -->
-        <% end %>
-    </div>
-    </header>
-
     <div class="main-content">
       <h1 class='main-logo'>Music App</h1>
+      <nav>
+        <a class = button href="<%= bands_url %>">Take me Home</a>
+        <div class="user-detail">
+          <% if !current_user.nil? %>
+            <p>Hello, <%= current_user.username %></p>
+            <%= button_to 'Log Out', session_url, method: :delete %>
+          <!-- <%= button_to 'Log Out', session_url, method: :delete %> -->
+          <% end %>
+        </div>
+      </nav>
       <%= yield %>
     </div>
   </body>
