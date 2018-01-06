@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user
+
   protect_from_forgery with: :exception
+  helper_method :current_user
 
   def current_user
     return nil unless session[:session_token]
@@ -8,6 +9,8 @@ class ApplicationController < ActionController::Base
   end
 
   def require_current_user
-    redirect_to new_session_url if current_user.nil
+    if current_user.nil?
+      redirect_to new_session_url
+    end
   end
 end

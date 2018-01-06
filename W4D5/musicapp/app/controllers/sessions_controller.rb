@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by_credential(params[:user][:username], params[:user][:password])
     if @user
-      redirect_to root
+      session[:session_token] = @user.session_token
+      redirect_to bands_url
     else
       flash[:errors] = 'Wrong Credential'
       render :new
@@ -22,6 +23,6 @@ class SessionsController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:usernmae, :password)
+    params.require(:user).permit(:username, :password)
   end
 end

@@ -1,0 +1,15 @@
+<% if @bands.empty? %>
+  <h3>There is no band yet</h3>
+<% else %>
+  <% @bands.each do |band| %>
+    <div class="bandname">
+      <h3>
+        <%= link_to "#{band.name}", band_url(band) %>
+        <!-- <%= band.name %> -->
+      </h3>
+    </div>
+  <% end %>
+<% end %>
+
+
+<%= button_to "Add New Band", new_band_url, method: :get%>

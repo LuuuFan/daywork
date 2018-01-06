@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:session_token] = @user.session_token
       current_user
-      redirect_to root
+      redirect_to bands_url
     else
       flash[:errors] = @user.errors.full_messages
       render :new

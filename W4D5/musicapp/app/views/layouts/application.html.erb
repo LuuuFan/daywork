@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <header>
+      <div class="nav">
+        <% if current_user %>
+          <p>Hello, <%= current_user.username %></p>
+          <%= link_to 'Log Out', session_url %>
+          <!-- <%= button_to 'Log Out', session_url, method: :delete %> -->
+        <% end %>
+    </div>
+    </header>
+
     <div class="main-content">
       <h1 class='main-logo'>Music App</h1>
       <%= yield %>
