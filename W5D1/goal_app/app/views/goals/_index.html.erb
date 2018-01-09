@@ -11,7 +11,7 @@
             <br>
             <%= goal.completed == "1" ? 'Completed' : 'Ongoing' %>
             <br>
-            <% if current_user.id != goal.user_id %>
+            <% if current_user.id != goal.user_id && !current_user.cheers.pluck(:goal_id).include?(goal.id) && current_user.cheers.length < 12 %>
                <!-- && !current_user.cheers.goals.include?(goal)%> -->
               <%= button_to "Cheer!", goal_cheers_url(goal), method: :create %>
             <% end %>
