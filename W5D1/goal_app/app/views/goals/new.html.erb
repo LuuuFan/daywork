@@ -1,0 +1,30 @@
+<h1>New Goal</h1>
+
+
+<%= render 'form', goal: @goal %>
+
+<%# if flash[:errors] %>
+  <!-- <p> -->
+    <%#= flash[:errors] %>
+  <!-- </p> -->
+<%# end %>
+
+
+<!-- <form class="" action="<%#= goals_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%#= form_authenticity_token %>">
+  <label for="title">Title
+    <input type="text" name="goal[title]" value="">
+  </label>
+  <label for="details">Details</label>
+  <! <br> -->
+  <!-- <textarea name="goal[details]" rows="8" cols="40"></textarea>
+  <label for="private">Private
+    <input type="checkbox" name="goal[private]" value="1">
+  </label>
+  <label for="completed">Completed
+    <input type="checkbox" name="goal[completed]" value="1">
+  </label>
+  <input type="submit" name="" value="New Goal">
+</form> -->
+
+<%= link_to 'Back', user_url(current_user) %>

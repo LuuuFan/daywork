@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<div class="Goal">
+  <h1>Goal:</h1>
+<p>
+  <strong>Title:</strong>
+  <%= @goal.title %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @goal.details %>
+</p>
+
+<p>
+  <strong>Visibility:</strong>
+  <%= @goal.private == "1" ? "private" : "public" %>
+</p>
+
+<p>
+  <strong>Finished?:</strong>
+  <%= @goal.completed == "1" ? 'Completed' : 'Ongoing' %>
+</p>
+
+<p>
+  <strong>Completed?:</strong>
+  <% if @goal.completed == "0" %>
+  <%= button_to "Complete", complete_goal_url(@goal), method: :complete %>
+  <% else %>
+  <%= button_to "Oops! Did not complete", uncomplete_goal_url(@goal), method: :uncomplete %>
+  <% end %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @goal.user.username %>
+</p>
+
+<div class="comments">
+  <ul>
+    <% @goal.comments.each do |comment| %>
+      <li><%= comment.body %></li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="new_comment">
+  <form class="" action="<%= goal_comments_url(@goal) %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <label for="body">Comment
+      <br>
+      <textarea name="comment[body]" rows="8" cols="40"></textarea>
+    </label>
+    <input type="submit" name="" value="Save Comment">
+  </form>
+</div>
+
+</div>
+<%#= link_to 'Edit', edit_goal_path(@goal) %> |
+<%= link_to 'Back', user_url(@goal.user) %>

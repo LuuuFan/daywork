@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cheer.user %>
+</p>
+
+<p>
+  <strong>Goal:</strong>
+  <%= @cheer.goal %>
+</p>
+
+<%= link_to 'Edit', edit_cheer_path(@cheer) %> |
+<%= link_to 'Back', cheers_path %>

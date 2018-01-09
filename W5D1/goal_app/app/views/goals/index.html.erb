@@ -1,0 +1,36 @@
+<div class="goals">
+  <h3><%= @user.username.capitalize %>'s Goals: </h3>
+  <div class="user_goals">
+    <ul>
+      <% @user.goals.each do |goal| %>
+        <% if goal.user_id == current_user || goal.private == "0" %>
+          <li>
+            <%= link_to goal.title, goal_url(goal) %>
+            <br>
+            <%= goal.private == "1" ? "private" : "public"  %>
+            <br>
+            <%= goal.completed == "1" ? 'Completed' : 'Ongoing' %>
+            <br>
+            <% if current_user.id != goal.user_id && !current_user.cheers.goals.include?(goal)%>
+              <%= button_to "Cheer!", goal_cheers_url(goal), method: :create %>
+            <% end %>
+            <% if goal.user_id == current_user.id %>
+              <% if goal.completed == '1' %>
+                <%= button_to "Oops! Did not complete", uncomplete_goal_url(goal), method: :post %>
+              <% else %>
+                <%= button_to "Complete", complete_goal_url(goal), method: :post %>
+              <% end %>
+              <%= button_to "Delete '#{goal.title}' goal", goal_url(goal), method: :delete %>
+            <% end %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <% if @user.id == current_user.id %>
+    <div class="links">
+      <%= link_to "New Goal", new_goal_url%>
+      <%= link_to "My Cheers!", cheers_url %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<div class="profile">
+  <h2><%= @user.username.capitalize %>'s Profile</h2>
+
+  <%= render 'comments/index' %>
+
+  <%= render 'comments/new' %>
+
+  <%= render 'goals/index'%>
+
+</div>
+
+
+<%= link_to "All Users", users_url %>

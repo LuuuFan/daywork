@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GoalApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <h1>Goaling App</h1>
+    <header>
+      <nav>
+        <% if current_user %>
+          <p>Hello, <%= current_user.username %></p>
+          <%= button_to "Log Out", session_url, method: :delete %>
+          <br>
+          <p>Cheers Remaining: <%= 12 - current_user.cheers.length %></p>
+        <% else %>
+          <%= link_to "Sign Up", new_user_url %>
+            <p>
+              or
+            </p>
+            <%= link_to "Log In", new_session_url %>
+        <% end %>
+      </nav>
+    </header>
+    <%= yield %>
+  </body>
+</html>

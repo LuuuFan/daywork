@@ -1,0 +1,17 @@
+<div class="add_comments">
+  <h3>New Comment</h3>
+  <% if flash[:errors] %>
+    <p> <%= flash[:errors] %></p>
+  <% end %>
+  <% if flash[:notice] %>
+    <p> <%= flash[:notice] %></p>
+  <% end %>
+  <form class="" action="<%= user_comments_url(@user) %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <label for="body">Comment
+      <br>
+      <textarea name="comment[body]" rows="8" cols="40"></textarea>
+    </label>
+    <input type="submit" name="" value="Save Comment">
+  </form>
+</div>
