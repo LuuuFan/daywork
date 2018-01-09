@@ -30,21 +30,27 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @comment = Comment.new(comment_params)
-    @comment.user_id = params[:user_id] if params[:user_id]
-    @comment.goal_id = params[:goal_id] if params[:goal_id]
+    if params[:user_id]
+      @comment.commentable_id = params[:user_id]
+      @comment.commentable_type = 'User'
+    end
+    if params[:goal_id]
+      @comment.commentable_id = params[:goal_id]
+      @comment.commentable_type = 'Goal'
+    end
     if @comment.save
       flash[:notice] = "Comment Saved"
       if params[:user_id]
-        redirect_to user_url(@comment.user)
+        redirect_to user_url(@comment.commentable_id)
       else
-        redirect_to goal_url(@comment.goal)
+        redirect_to goal_url(@comment.commentable_id)
       end
     else
       flash[:errors] = @comment.errors.full_messages
       if params[:user_id]
-        redirect_to user_url(@comment.user)
+        redirect_to user_url(@comment.commentable_id)
       else
-        redirect_to goal_url(@comment.goal)
+        redirect_to goal_url(@comment.commentable_id)
       end
     end
   end

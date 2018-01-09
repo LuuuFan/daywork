@@ -38,14 +38,24 @@ class GoalsController < ApplicationController
 
   def complete
     @goal.completed = "1"
-    @goal.save
-    redirect_to goal_url(@goal)
+    if @goal.save
+      flash[:notice] = 'Goal updated'
+      redirect_to goal_url(@goal)
+    else
+      flash[:errors] = @goal.errors.full_messages
+      redirect_to goal_url(@goal)
+    end
   end
 
   def uncomplete
     @goal.completed = "0"
-    @goal.save
-    redirect_to goal_url(@goal)
+    if @goal.save
+      flash[:notice] = 'Goal updated'
+      redirect_to goal_url(@goal)
+    else
+      flash[:errors] = @goal.errors.full_messages
+      redirect_to goal_url(@goal)
+    end
   end
 
   # PATCH/PUT /goals/1

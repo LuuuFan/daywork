@@ -22,3 +22,12 @@ nav {
 nav * {
   padding-right: 20px;
 }
+
+table, th, td {
+  border: 1px solid gray;
+}
+
+th, td {
+  text-align: center;
+  padding: 3px;
+}

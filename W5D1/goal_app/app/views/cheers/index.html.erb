@@ -5,25 +5,28 @@
 <table>
   <thead>
     <tr>
-      <th>User</th>
-      <th>Goal</th>
-      <th colspan="3"></th>
+      <th>Cheer From User</th>
+      <th>Cheers on Your Goal</th>
+      <!-- <th colspan="3"></th> -->
     </tr>
   </thead>
 
   <tbody>
-    <% @cheers.each do |cheer| %>
+    <% current_user.goals.each do |goal| %>
+      <% goal.cheers.each do |cheer| %>
       <tr>
-        <td><%= cheer.user %></td>
-        <td><%= cheer.goal %></td>
-        <td><%= link_to 'Show', cheer %></td>
-        <td><%= link_to 'Edit', edit_cheer_path(cheer) %></td>
-        <td><%= link_to 'Destroy', cheer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= cheer.user.username %></td>
+        <td><%= cheer.goal.title %></td>
+        <!-- <td><%#= link_to 'Show', cheer %></td>
+        <td><%#= link_to 'Edit', edit_cheer_path(cheer) %></td>
+        <td><%#= link_to 'Destroy', cheer, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Cheer', new_cheer_path %>
+<%= link_to "Back", user_url(current_user) %>
+<%#= link_to 'New Cheer', new_cheer_path %>

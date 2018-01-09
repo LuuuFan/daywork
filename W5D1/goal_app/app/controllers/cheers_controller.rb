@@ -24,9 +24,16 @@ class CheersController < ApplicationController
   # POST /cheers
   # POST /cheers.json
   def create
-    @cheer = Cheer.new(cheer_params)
+    @cheer = Cheer.new
     @cheer.user_id = current_user.id
     @cheer.goal_id = params[:goal_id]
+    if @cheer.save
+      flash[:notice] = "You cheered #{@cheer.goal.user.username}'s goal!"
+      redirect_to user_url(@cheer.goal.user)
+    else
+      flash[:errors] = @cheer.errors.full_messages
+      redirect_to user_url(@cheer.goal.user)
+    end
   end
 
   # PATCH/PUT /cheers/1
