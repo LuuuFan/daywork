@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reddit</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="link">
+        <%= link_to "All Subs", subs_url %>
+      </div>
+      <% if current_user %>
+      <div class="link">
+        <%= link_to 'Create a Sub!', new_sub_url %>
+      </div>
+      <p>Hello! <%= current_user.username %></p>
+      <%= button_to 'Sign Out', session_url, method: :delete %>
+      <% end %>
+    </header>
+    <%= yield %>
+  </body>
+</html>

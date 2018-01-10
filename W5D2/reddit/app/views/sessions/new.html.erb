@@ -1,0 +1,24 @@
+<h1>
+  Sign In
+</h1>
+
+<div class="link">
+  <%= link_to 'Sign Up', new_user_url %>
+</div>
+
+<% if flash.now[:errors] %>
+  <p>
+    <%= flash.now[:errors] %>
+  </p>
+<% end %>
+
+<form class="" action="<%= session_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  Username <input id="Username" type="text" name="user[username]" value="<%= @user.username %>">
+  <br>
+  Password <input id="Password" type="password" name="user[password]" value="<%= @user.password %>">
+  <br>
+  <input type="submit" name="" value="Sign In">
+
+
+</form>

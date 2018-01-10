@@ -1,0 +1,16 @@
+Add Comment
+<% if flash[:errors] %>
+<% flash[:errors].each do |error| %>
+<%= error %>
+<% end %>
+<% end %>
+<form class="" action="<%= params[:post_id] ? post_comments_url(params[:post_id]) : comment_comments_url(params[:comment_id]) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  Comment
+  <br>
+
+  <textarea name="comment[content]" rows="8" cols="40"><%= @comment.content %></textarea>
+  <br>
+
+  <input type="submit" name="" value="Add Comment">
+</form>

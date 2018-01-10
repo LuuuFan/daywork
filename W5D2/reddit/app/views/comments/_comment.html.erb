@@ -1,0 +1,11 @@
+<%= link_to comment.content, comment_url(comment) %>
+
+<ul>
+  <% all_comments[comment.id].each do |comment2| %>
+
+    <li>
+      <%= render 'comments/comment', comment: comment2, all_comments: all_comments %>
+    </li>
+
+  <% end %>
+</ul>

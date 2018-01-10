@@ -1,0 +1,17 @@
+<h1><%= @sub.title %></h1>
+
+<h2>Description</h2>
+<p>
+  <%= @sub.description %>
+</p>
+
+<div class="link">
+  <%= link_to "Make New Post!", new_post_url %>
+</div>
+
+
+<%= render 'posts/index', sub: @sub %>
+
+<div class="link">
+  <%= link_to 'All Subs', subs_url %>
+</div>

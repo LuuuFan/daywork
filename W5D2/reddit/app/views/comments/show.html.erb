@@ -1,0 +1,38 @@
+(<%= @comment.vote_count %>)<%= @comment.content %>
+
+<%= link_to "Post", post_url(@comment.post_id) %>
+
+<br>
+<form class="" action="<%= comment_votes_url(@comment) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="vote[value]" value="1">
+  <input type="submit" name="" value="Upvote">
+</form>
+
+<form class="" action="<%= comment_votes_url(@comment) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="vote[value]" value="-1">
+  <input type="submit" name="" value="Downvote">
+</form>
+<br>
+Reply to this comment:
+
+<form class="" action="<%= comment_comments_url(@comment) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  Comment
+  <br>
+
+  <textarea name="comment[content]" rows="8" cols="40"></textarea>
+  <br>
+
+  <input type="submit" name="" value="Reply Comment">
+</form>
+
+<ul>
+  <% all_comments = @comment.post.comments_by_parent_id %>
+  <% all_comments[@comment.id].each do |comment| %>
+  <li>
+    <%= render 'comments/comment', comment: comment, all_comments: all_comments %>
+  </li>
+  <% end %>
+</ul>

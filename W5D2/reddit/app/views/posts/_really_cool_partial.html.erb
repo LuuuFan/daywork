@@ -1,0 +1,12 @@
+<% if @post.top_level_comments %>
+  <ul>
+
+  <% @post.top_level_comments.each do |comment| %>
+    <li>
+      <%= render 'comments/comment', comment: comment %>
+    </li>
+  <% end %>
+  <br>
+
+  </ul>
+<% end %>

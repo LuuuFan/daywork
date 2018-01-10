@@ -1,0 +1,54 @@
+<h1>
+(<%= @post.vote_count %>)
+<%= link_to @post.title, post_url(@post) %>
+By <%= @post.author.username %>
+</h1>
+
+Content:
+<%= @post.content %>
+
+<form class="" action="<%= post_votes_url(@post) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="vote[value]" value="1">
+  <input type="submit" name="" value="Upvote">
+</form>
+
+<form class="" action="<%= post_votes_url(@post) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="vote[value]" value="-1">
+  <input type="submit" name="" value="Downvote">
+</form>
+
+<%#= button_to 'Upvote', post_votes_url(@post), method: :post %>
+<%#= button_to 'Downvote', post_votes_url(@post), method: :post %>
+
+<ul>
+<% @post.subs.each do |sub| %>
+  <li> <%= link_to sub.title, sub_url(sub) %> </li>
+<% end %>
+</ul>
+
+<div class="link">
+
+<%= link_to "Edit Post", edit_post_url(@post) %>
+
+<%= link_to "Add Comment", new_post_comment_url(@post) %>
+
+</div>
+
+<div class="comments">
+
+Comments
+<br>
+
+<% @all_comments[nil].each do |comment| %>
+  <li>
+    <%= render 'comments/comment', comment: comment, all_comments: @all_comments %>
+  </li>
+<% end %>
+
+</div>
+
+<div class="link">
+  <%= link_to "All Sub", subs_url %>
+</div>
