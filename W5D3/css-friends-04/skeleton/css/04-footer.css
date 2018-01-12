@@ -1,0 +1,31 @@
+/* PHASE 4: Footer */
+footer {
+  /* height: 50px; */
+  width: 900px;
+  margin: auto;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  background-color: white;
+  color: gray;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 0 0 5px 5px;
+}
+
+footer div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.links ul {
+  justify-content: center;
+  display: flex;
+}
+
+.links li {
+  padding-left: 18px;
+  padding-right: 5px;
+}

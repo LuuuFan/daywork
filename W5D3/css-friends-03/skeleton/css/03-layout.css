@@ -1,0 +1,17 @@
+/* PHASE 3: Layout */
+.main {
+  display: flex;
+  margin: auto;
+  width: 900px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  background-color: white;
+  height: 500px;
+}
+
+.main div:first-of-type{
+  border-right: 1px solid #ccc;
+  width: 240px;
+  height: 500px
+}
