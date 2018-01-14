@@ -42,7 +42,7 @@ const innerBubbleSortLoop = (arr, i, madeAnySwaps = false, outerBubbleSortLoop) 
     // console.log("hi");
     askIfGreaterThan(arr[i], arr[i + 1], (isGreaterThan) => {
       if (isGreaterThan) {
-        console.log('Inside askIfGreaterThan');
+        // console.log('Inside askIfGreaterThan');
         [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
         console.log(arr);
         madeAnySwaps = true;
