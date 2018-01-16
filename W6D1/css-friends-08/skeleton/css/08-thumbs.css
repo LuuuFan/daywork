@@ -1,0 +1,39 @@
+/* PHASE 8: Thumbs */
+.friend-photos > li{
+  margin: 0 0 10px 0;
+}
+
+.friend-photos >li:nth-child(3n -1){
+  margin: 0 10px 10px 10px;
+}
+
+.friend-photos li {
+  float: left;
+  width: 60px;
+
+}
+
+.thumb::before{
+  
+}
+
+.thumb{
+  display: block;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 58px;
+  height: 58px;
+}
+
+.thumb > img{
+  border-radius: 5px;
+}
+
+
+
+.group:after{
+  content: "";
+  display: block;
+  clear: both;
+}
