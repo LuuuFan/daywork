@@ -1,0 +1,60 @@
+body{
+  width: 800px;
+  margin: auto;
+  font-family: 'Roboto';
+}
+
+h1{
+  text-align: center;
+  font-weight: 900;
+  font-size: 90px;
+}
+
+.group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.hanoi{
+  margin: 30px auto;
+  width: 600px;
+  height: 200px;
+}
+
+
+ul {
+  float: left;
+  width: 180px;
+  padding: 0 0 10px 0;
+  margin-right: 15px;
+  border-bottom: 10px solid black;
+  cursor: pointer;
+  list-style: none;
+  height: 100%;
+}
+
+ul:hover {
+  border-bottom: 10px solid blue;
+}
+
+.disc-3, .disc-2, .disc-1 {
+  background-color: gray;
+  border-radius: 25px;
+  margin-bottom: 25px;
+  display: block;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.disc-3 {
+  width: 180px;
+}
+
+.disc-2 {
+  width: 120px;
+}
+
+.disc-1 {
+  width: 60px;
+}

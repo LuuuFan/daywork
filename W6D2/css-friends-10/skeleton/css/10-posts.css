@@ -1,0 +1,25 @@
+/* PHASE 10: Posts */
+
+
+hr {
+  display: block;
+}
+
+/* .thumb img{
+  width: 100%;
+  height: 100%;
+} */
+
+.post-thumb {
+  float: left;
+}
+
+.posts > ul > li > div {
+  float: left;
+}
+
+.group:after{
+  content: "";
+  clear: both;
+  display: block;
+}
