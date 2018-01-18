@@ -1,0 +1,14 @@
+<h1>Welcome <%= current_user.username %>!</h1>
+
+<%= render 'tweets/form' %>
+
+<b>Your Feed!</b>
+<div class="infinite-tweets">
+  <ul class='tweets' id="feed">
+    <% @feed_tweets.each do |tweet| %>
+      <li>
+        <%= render 'tweets/tweet', tweet: tweet %>
+      </li>
+    <% end %>
+  </ul>
+</div>
