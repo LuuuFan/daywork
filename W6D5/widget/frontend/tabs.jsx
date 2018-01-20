@@ -35,7 +35,7 @@ class Tabs extends React.Component {
         <div className="tab-header">
           {this.props.title.map((title, idx) => {
               return(
-                <span id={idx} className={this.state.index===idx ? 'active' : ''}>
+                <span key={idx} id={idx} className={this.state.index===idx ? 'active' : ''}>
                   <span onClick={this.clickHandler}>{title}</span>
                 </span>
               );
