@@ -10,7 +10,7 @@ class Weather extends React.Component {
   componentDidMount(){
     navigator.geolocation.getCurrentPosition((pos)=>{
       const url = `http://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=be182788a8d4e2a8a2a1803c42eea32c`
-      console.log(url);
+      // console.log(url);
       this.getCity(url);
     });
   }
@@ -21,7 +21,7 @@ class Weather extends React.Component {
     // debugger
     xhr.onreadystatechange = () => {
       if (xhr.readyState === 4 && xhr.status === 200) {
-        console.log(JSON.parse(xhr.response));
+        // console.log(JSON.parse(xhr.response));
         this.setState({weather: JSON.parse(xhr.response)});
       }
     }
