@@ -45,9 +45,14 @@ body{
   font-family: 'Open Sans';
   line-height: 1.2;
   background-image: url('http://placecorgi.com/2000/2000');
+  /* background-image: url('http://4.bp.blogspot.com/-a5knfTD8So4/VN6KAAX6lfI/AAAAAAAAFu4/6_weP5HZ4LI/s1600/shirleyngbenitez_hvd_animated.gif'); */
+  opacity: 0.8;
 }
 
-
+div.clock:hover {
+/* , .weather:hover, .tabs:hover, .auto:hover{ */
+  opacity: 1.0;
+}
 
 h1{
   font-size: 28px;
