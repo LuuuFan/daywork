@@ -13,7 +13,7 @@ const TodoListItem = (props) => {
       </h3>
       <button onClick={()=> props.updateTodo(props.todo)}>{ props.todo.done ? 'Undo' : 'Done' }</button>
       </div>
-      <TodoDetailView todo={props.todo}/>
+      <TodoDetailView todo={props.todo} removeTodo={props.removeTodo}/>
     </li>
   );
 };
