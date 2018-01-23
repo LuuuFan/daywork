@@ -8,8 +8,8 @@ const TodoListItem = (props) => {
       <a>
         {props.todo.title}
       </a>
-      <button>{ props.todo.done ? 'Undo' : 'Done' }</button>
-      <button onClick={ props.removeTodo } className="DeleteTodo">Delete Todo</button>
+      <button onClick={()=> props.updateTodo(props.todo)}>{ props.todo.done ? 'Undo' : 'Done' }</button>
+      <button onClick={ ()=>props.removeTodo(props.todo) } className="DeleteTodo">Delete Todo</button>
     </li>
   );
 };
