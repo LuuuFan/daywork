@@ -28,12 +28,16 @@ li{
   list-style: none;
   padding: 20px;
   background-color: white;
-  height: 40px;
+  height: auto;
   margin-bottom: 20px;
   border: 1px solid #00BCD4;
   border-radius: 5px;
+}
+
+.todoHeader{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 form>button{
@@ -52,6 +56,12 @@ input, textarea {
   margin: 10px auto;
 }
 
+.todoDetailView{
+  display: block;
+  /* background-color: #B2EBF2; */
+
+}
+
 .DeleteTodo{
   background-color: #FF4081;
   border: 0px solid
@@ -68,6 +78,7 @@ button{
   border-radius: 5px;
   font-weight: 900;
   font-size: 16px;
+  height:40px;
   border: 1px solid #00BCD4;
 }
 

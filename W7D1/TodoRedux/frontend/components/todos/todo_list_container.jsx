@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import TodoList from "./todo_list";
 import { todoSelector } from '../../reducers/selectors';
-import { receiveTodo, receiveTodos, removeTodo, updateTodo } from '../../actions/todo_actions';
+import { receiveTodo, updateTodo } from '../../actions/todo_actions';
 
 
 // class ToDoListContainer extends React.Component {
@@ -28,8 +28,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     receiveTodo: (todo) => dispatch(receiveTodo(todo)),
-    removeTodo: (todo) => dispatch(removeTodo(todo)),
     updateTodo: (todo) => dispatch(updateTodo(todo)),
+    // removeTodo: (todo) => dispatch(removeTodo(todo)),
   };
 };
 

@@ -45,7 +45,7 @@ const todosReducer = (state = initialState, action) => {
       return merge({}, state, newTodos);
 
     case REMOVE_TODO:
-      // debugger
+      debugger
       const resTodos = merge({}, state);
       delete resTodos[action.todo.id];
       return resTodos;
