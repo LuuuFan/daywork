@@ -37,7 +37,7 @@ class TodoForm extends React.Component {
         <textarea id='form-body' rows="8" cols="40"></textarea>
 
         <br />
-        <button onClick={this.handleSubmit}>Create Todo!</button>
+        <button onClick={this.handleSubmit} className='create-button'>Create Todo!</button>
       </form>
     );
   }
