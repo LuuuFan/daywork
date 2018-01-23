@@ -5,7 +5,7 @@ import TodoForm from './todo_list/todo_form';
 
 const App = () => (
   <div>
-    <h1>Todo App</h1>
+    <h1>Our Super Awesome Todo List</h1>
     <TodoListContainer />
   </div>
 );

@@ -1,0 +1,12 @@
+body, h1, h2, p, a, span, button {
+  font-family: "Gloria Hallelujah";
+}
+
+li{
+  list-style: none;
+  padding: 20px;
+}
+
+li>a{
+  padding-right: 20px;
+}
