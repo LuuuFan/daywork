@@ -16,3 +16,4 @@ import TodoForm from '../todo_list/todo_form';
  );
 
  export default TodoList;
+ // removeTodo={removeTodo}

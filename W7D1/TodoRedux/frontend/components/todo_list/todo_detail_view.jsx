@@ -1,12 +1,12 @@
 import React from 'react';
 
-const TodoDetailView = (props) => {
+const TodoDetailView = ({todo, removeTodo}) => {
   // debugger
   return (
     <div className='todoDetailView'>
-      <p>{props.todo.body}</p>
+      <p>{todo.body}</p>
 
-      <button onClick={ ()=> props.removeTodo(props.todo) } className="DeleteTodo">Delete Todo</button>
+      <button onClick={ ()=> removeTodo(todo) } className="DeleteTodo">Delete Todo</button>
     </div>
   );
 }
