@@ -19325,10 +19325,6 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _todo_list_container = __webpack_require__(34);
-
-var _todo_list_container2 = _interopRequireDefault(_todo_list_container);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19336,6 +19332,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import TodoListContainer from '../todos/todo_list_container';
 
 var TodoForm = function (_React$Component) {
   _inherits(TodoForm, _React$Component);
@@ -39273,6 +39271,10 @@ var _step_list_container = __webpack_require__(90);
 
 var _step_list_container2 = _interopRequireDefault(_step_list_container);
 
+var _step_form = __webpack_require__(94);
+
+var _step_form2 = _interopRequireDefault(_step_form);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var TodoDetailView = function TodoDetailView(_ref) {
@@ -39289,6 +39291,7 @@ var TodoDetailView = function TodoDetailView(_ref) {
       todo.body
     ),
     _react2.default.createElement(_step_list_container2.default, { todoId: todo.id }),
+    _react2.default.createElement(_step_form2.default, null),
     _react2.default.createElement(
       'button',
       { onClick: function onClick() {
@@ -39491,16 +39494,105 @@ var StepListItem = function StepListItem(_ref) {
       )
     ),
     _react2.default.createElement(
-      'button',
-      { onClick: function onClick() {
-          return removeStep(step);
-        }, className: 'DeleteTodo' },
-      'Delete'
+      'div',
+      null,
+      _react2.default.createElement(
+        'button',
+        { onClick: function onClick() {
+            return step.updateTodo(undefined.props.todo);
+          }, className: step.done ? 'Undo' : 'Done' },
+        step.done ? 'Undo' : 'Done'
+      ),
+      _react2.default.createElement(
+        'button',
+        { onClick: function onClick() {
+            return removeStep(step);
+          }, className: 'DeleteTodo' },
+        'Delete'
+      )
     )
   );
 };
 
 exports.default = StepListItem;
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var StepForm = function (_React$Component) {
+  _inherits(StepForm, _React$Component);
+
+  function StepForm() {
+    _classCallCheck(this, StepForm);
+
+    var _this = _possibleConstructorReturn(this, (StepForm.__proto__ || Object.getPrototypeOf(StepForm)).call(this));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(StepForm, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "form",
+        { className: "new-todo-form" },
+        this.props.errors ? _react2.default.createElement(
+          "ul",
+          null,
+          this.props.errors
+        ) : "",
+        _react2.default.createElement(
+          "label",
+          null,
+          "Title:"
+        ),
+        _react2.default.createElement("br", null),
+        _react2.default.createElement("input", { id: "form-title", type: "text" }),
+        _react2.default.createElement("br", null),
+        _react2.default.createElement(
+          "label",
+          null,
+          "Description:"
+        ),
+        _react2.default.createElement("br", null),
+        _react2.default.createElement("input", { id: "form-body", type: "text" }),
+        _react2.default.createElement("br", null),
+        _react2.default.createElement(
+          "button",
+          { onClick: this.handleSubmit, className: "create-button" },
+          "Create Step!"
+        )
+      );
+    }
+  }]);
+
+  return StepForm;
+}(_react2.default.Component);
+
+exports.default = StepForm;
 
 /***/ })
 /******/ ]);
