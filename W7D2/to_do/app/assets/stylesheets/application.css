@@ -1,0 +1,108 @@
+body, h1, h2, p, a, span, button, ul, li,label,input, textarea {
+  font-family: "Gloria Hallelujah";
+  padding: 0px;
+  /* margin: 0 auto; */
+}
+
+h1{
+  padding: 30px;
+  color: #0097A7;
+  text-align: center;
+}
+
+body {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #B2EBF2;
+}
+
+.root{
+  width: 60%;
+}
+
+ul{
+  width: 100%;
+}
+
+li{
+  list-style: none;
+  padding: 20px;
+  background-color: white;
+  height: auto;
+  margin-bottom: 20px;
+  border: 1px solid #00BCD4;
+  border-radius: 5px;
+}
+
+.todoHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form>button{
+  text-align: center;
+}
+
+input, textarea {
+  border-radius: 5px;
+  border: 1px solid #00BCD4;
+  width: 97%;
+  padding: 10px;
+}
+
+.create-button{
+  width: 40%;
+  margin: 10px auto;
+}
+
+.todoDetailView{
+  display: block;
+  /* background-color: #B2EBF2; */
+
+}
+
+.DeleteTodo{
+  background-color: #FF4081;
+  border: 0px solid
+}
+
+.DeleteTodo:hover{
+  background-color: gray;
+}
+
+.step_list_item{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0px;
+  padding: 5px;
+  margin-left: 25px;
+  margin-bottom: 0px;
+}
+
+button{
+  padding: 0 20px 0 20px;
+  background-color: #00BCD4;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  font-weight: 900;
+  font-size: 16px;
+  height:40px;
+  border: 1px solid #00BCD4;
+}
+
+button:hover{
+  background-color: #0097A7;
+}
+
+.Undo{
+  background-color: gray;
+  border-color: gray;
+}
+
+a{
+  cursor: pointer;
+}

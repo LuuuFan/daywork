@@ -7,7 +7,7 @@ import TodoForm from '../todo_list/todo_form';
   <div>
    <ul>
      {todos.map(todo =>
-       <TodoListItem todo={todo} removeTodo={removeTodo} updateTodo={updateTodo} key={todo.id}/>
+       <TodoListItem todo={todo} updateTodo={updateTodo} key={todo.id}/>
      )}
    </ul>
    <TodoForm receiveTodo={receiveTodo}/>

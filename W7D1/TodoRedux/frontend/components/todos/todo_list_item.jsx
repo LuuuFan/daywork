@@ -1,5 +1,5 @@
 import React from 'react';
-import TodoDetailView from '../todo_list/todo_detail_view';
+import TodoDetailViewContainer from '../todo_list/todo_detail_view_container';
 
 const TodoListItem = (props) => {
   // debugger
@@ -13,7 +13,7 @@ const TodoListItem = (props) => {
       </h3>
       <button onClick={()=> props.updateTodo(props.todo)}>{ props.todo.done ? 'Undo' : 'Done' }</button>
       </div>
-      <TodoDetailView todo={props.todo} removeTodo={props.removeTodo}/>
+      <TodoDetailViewContainer todo={props.todo} />
     </li>
   );
 };
