@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store.js';
+import { HashRouter, Route } from 'react-router-dom';
 // import {receiveAllPokemon, requestAllPokemon} from './actions/pokemon_actions'
 // import {fetchAllPokemon} from './util/api_util';
 // import {selectAllPokemon} from './reducers/selectors';
