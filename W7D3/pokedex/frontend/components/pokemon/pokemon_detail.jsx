@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link, Route} from 'react-router-dom';
+import ItemDetailContainer from '../items/item_detail_container';
 
 class PokemonDetail extends React.Component {
   constructor (){
@@ -39,10 +41,15 @@ class PokemonDetail extends React.Component {
           <div className='item-list-div'>
             <h3>Items</h3>
             <ul className='item-list'>
-              {pokemon.item_ids ? pokemon.item_ids.map(idx =>
-                <li><img key={idx} src={items[idx.toString()].image_url} /></li>
+              {pokemon.item_ids ? pokemon.item_ids.map(id =>
+                <Link key={id} to={`/pokemon/${pokemon.id}/item/${id}`}>
+                  <li>
+                    <img src={items[id.toString()].image_url} />
+                  </li>
+                </Link>
               ) : ''}
             </ul>
+            <Route path="/pokemon/:pokemonId/item/:itemId" component={ItemDetailContainer} />
           </div>
         </div>
       );

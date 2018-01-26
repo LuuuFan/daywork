@@ -1,0 +1,31 @@
+ul.index {
+  height: 900px;
+  width: 25%;
+  overflow: scroll;
+  // float: left;
+}
+
+.index li {
+  list-style: none;
+  border-top: 1px solid gray;
+  // border-bottom: 1px solid gray;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+
+li:hover{
+  background-color: lightgray;
+}
+
+a{
+  color: gray;
+  text-decoration: none;
+}
+
+a>li>img {
+  width: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

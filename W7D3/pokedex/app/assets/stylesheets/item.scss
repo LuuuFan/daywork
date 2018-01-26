@@ -1,0 +1,99 @@
+.item-list-div{
+  border: 5px solid black;
+  border-radius: 10px;
+  background-image: radial-gradient(circle at 100% 150%, #F6F6F6 24%, #fff 25%, #fff 28%, #F6F6F6 29%, #F6F6F6 36%, #fff 36%, #fff 40%, transparent 40%, transparent),radial-gradient(circle at 0 150%, #F6F6F6 24%, #fff 25%, #fff 28%, #F6F6F6 29%, #F6F6F6 36%, #fff 36%, #fff 40%, transparent 40%, transparent),radial-gradient(circle at 50% 100%, #fff 10%, #F6F6F6 11%, #F6F6F6 23%, #fff 24%, #fff 30%, #F6F6F6 31%, #F6F6F6 43%, #fff 44%, #fff 50%, #F6F6F6 51%, #F6F6F6 63%, #fff 64%, #fff 71%, transparent 71%, transparent),radial-gradient(circle at 100% 50%, #fff 5%, #F6F6F6 6%, #F6F6F6 15%, #fff 16%, #fff 20%, #F6F6F6 21%, #F6F6F6 30%, #fff 31%, #fff 35%, #F6F6F6 36%, #F6F6F6 45%, #fff 46%, #fff 49%, transparent 50%, transparent),radial-gradient(circle at 0 50%, #fff 5%, #F6F6F6 6%, #F6F6F6 15%, #fff 16%, #fff 20%, #F6F6F6 21%, #F6F6F6 30%, #fff 31%, #fff 35%, #F6F6F6 36%, #F6F6F6 45%, #fff 46%, #fff 49%, transparent 50%, transparent);
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.item-list-div h3{
+  font-size: 24px;
+}
+
+.item-list-div ul{
+  width:90%;
+  border: 3px solid gray;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  list-style: none;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.item-list-div a {
+  padding: 10px;
+  width: 30%;
+  // background-color: white;
+}
+
+.item-list-div a li {
+  height: 100%;
+}
+.item-list-div{
+  border: 5px solid black;
+  border-radius: 10px;
+  background-image: radial-gradient(circle at 100% 150%, #F6F6F6 24%, #fff 25%, #fff 28%, #F6F6F6 29%, #F6F6F6 36%, #fff 36%, #fff 40%, transparent 40%, transparent),radial-gradient(circle at 0 150%, #F6F6F6 24%, #fff 25%, #fff 28%, #F6F6F6 29%, #F6F6F6 36%, #fff 36%, #fff 40%, transparent 40%, transparent),radial-gradient(circle at 50% 100%, #fff 10%, #F6F6F6 11%, #F6F6F6 23%, #fff 24%, #fff 30%, #F6F6F6 31%, #F6F6F6 43%, #fff 44%, #fff 50%, #F6F6F6 51%, #F6F6F6 63%, #fff 64%, #fff 71%, transparent 71%, transparent),radial-gradient(circle at 100% 50%, #fff 5%, #F6F6F6 6%, #F6F6F6 15%, #fff 16%, #fff 20%, #F6F6F6 21%, #F6F6F6 30%, #fff 31%, #fff 35%, #F6F6F6 36%, #F6F6F6 45%, #fff 46%, #fff 49%, transparent 50%, transparent),radial-gradient(circle at 0 50%, #fff 5%, #F6F6F6 6%, #F6F6F6 15%, #fff 16%, #fff 20%, #F6F6F6 21%, #F6F6F6 30%, #fff 31%, #fff 35%, #F6F6F6 36%, #F6F6F6 45%, #fff 46%, #fff 49%, transparent 50%, transparent);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.item-list-div h3{
+  font-size: 24px;
+}
+
+.item-list-div ul{
+  height: auto;
+  border: 3px solid gray;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  list-style: none;
+  margin-bottom: 50px;
+  // padding-bottom: 20px;
+}
+
+.item-list-div a {
+  // padding: 10px;
+  height:180px;
+  width: 180px;
+  // background-color: white;
+}
+
+.item-list-div a li {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.item-list-div a li img {
+  height: 80%;
+  width: 80%
+}
+
+.item-list-div li:hover{
+  background-color: white;
+  box-shadow: 1px 1px 5px black;
+}
+
+.item-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.item-detail p {
+  font-size: 20px;
+
+}

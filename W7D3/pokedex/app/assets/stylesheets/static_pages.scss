@@ -1,117 +1,12 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-ul.index {
-  height: 900px;
-  width: 25%;
-  overflow: scroll;
-  float: left;
+.group::after{
+  content: "";
+  clear: both;
+  display: block;
 }
 
-.index li {
-  list-style: none;
-  border-top: 1px solid gray;
-  // border-bottom: 1px solid gray;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  align-items: center;
-  cursor: pointer;
-}
-
-li:hover{
-  background-color: lightgray;
-}
-
-a{
-  color: gray;
-  text-decoration: none;
-}
-
-a>li>img {
-  width: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.pokemon-detail {
-  background-color: lightgray;
-  border: 5px solid black;
-  border-radius: 10px;
-  float: left;
-  width: 60%;
-  height: auto;
-  margin-left: 40px;
+.pokedex {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.item-list-div{
-  height: 300px;
-  border: 5px solid black;
-  border-radius: 10px;
-  background-image: radial-gradient(circle at 100% 150%, #F6F6F6 24%, #fff 25%, #fff 28%, #F6F6F6 29%, #F6F6F6 36%, #fff 36%, #fff 40%, transparent 40%, transparent),radial-gradient(circle at 0 150%, #F6F6F6 24%, #fff 25%, #fff 28%, #F6F6F6 29%, #F6F6F6 36%, #fff 36%, #fff 40%, transparent 40%, transparent),radial-gradient(circle at 50% 100%, #fff 10%, #F6F6F6 11%, #F6F6F6 23%, #fff 24%, #fff 30%, #F6F6F6 31%, #F6F6F6 43%, #fff 44%, #fff 50%, #F6F6F6 51%, #F6F6F6 63%, #fff 64%, #fff 71%, transparent 71%, transparent),radial-gradient(circle at 100% 50%, #fff 5%, #F6F6F6 6%, #F6F6F6 15%, #fff 16%, #fff 20%, #F6F6F6 21%, #F6F6F6 30%, #fff 31%, #fff 35%, #F6F6F6 36%, #F6F6F6 45%, #fff 46%, #fff 49%, transparent 50%, transparent),radial-gradient(circle at 0 50%, #fff 5%, #F6F6F6 6%, #F6F6F6 15%, #fff 16%, #fff 20%, #F6F6F6 21%, #F6F6F6 30%, #fff 31%, #fff 35%, #F6F6F6 36%, #F6F6F6 45%, #fff 46%, #fff 49%, transparent 50%, transparent);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 80%;
-  margin-top: 30px;
-}
-
-.item-list-div h3{
-  font-size: 24px;
-}
-
-.item-list-div ul{
-  height: auto;
-  border: 3px solid gray;
-  border-radius: 10px;
-  background-color: white;
-  display: flex;
-  list-style: none;
-  margin-bottom: 50px;
-}
-
-.item-list-div li {
-  padding: 10px;
-  height:180px;
-  width: 180px;
-  background-color: white;
-}
-
-.item-list-div li img {
-  height: 80%;
-}
-
-.item-list-div li img:hover{
-  box-shadow: 1px 1px 5px black;
-}
-
-.pokemon-detail>figure{
-  border: 4px solid black;
-  border-radius: 8px;
-  background: linear-gradient(315deg, #d43316, #ff0);
-  margin: 0 auto;
-  width: 80%;
-  margin-top: 40px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-}
-
-.pokemon-detail li {
-  font-size: 26px;
-  list-style: none;
-}
-
-.pokemon-detail ul {
-  margin: auto;
-}
-
-.pokemon-detail>figure>img{
-  margin: auto;
-  align-items: center;
-  height: 90%;
-  // text-align: center;
 }
