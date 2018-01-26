@@ -9,4 +9,13 @@ class Api::PokemonController < ApplicationController
     @pokemon = Pokemon.find_by(id: params[:id])
     render :show
   end
+
+  def create
+
+  end
+
+  private
+  def pokemon_params
+    
+  end
 end
