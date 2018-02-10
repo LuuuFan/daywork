@@ -11726,3 +11726,188 @@ Started GET "/assets/application.self-15b0db0ca3abc21d2bee18898fef78d85ef78b9a12
 Started GET "/assets/application.self-15b0db0ca3abc21d2bee18898fef78d85ef78b9a12695c5b50697e4c8c6c2e8f.css?body=1&livereload=1515050584557" for ::1 at 2018-01-03 23:23:04 -0800
 Started GET "/assets/application.self-15b0db0ca3abc21d2bee18898fef78d85ef78b9a12695c5b50697e4c8c6c2e8f.css?body=1&livereload=1515084286531" for ::1 at 2018-01-04 08:44:46 -0800
 Started GET "/assets/application.self-15b0db0ca3abc21d2bee18898fef78d85ef78b9a12695c5b50697e4c8c6c2e8f.css?body=1&livereload=1515084286536" for ::1 at 2018-01-04 08:44:46 -0800
+Started GET "/" for ::1 at 2018-02-10 13:49:11 -0800
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /var/lib/gems/2.3.0/gems/activerecord-5.0.6/lib/active_record/railtie.rb:113)
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_sections_sidebar.html.erb (0.5ms)
+  Rendered shared/_gear_dropdown.html.erb (0.4ms)
+  Rendered shared/_main_nav.html.erb (3.9ms)
+  Rendered shared/_masthead.html.erb (0.4ms)
+  Rendered shared/_sections_nav.html.erb (0.6ms)
+  Rendered shared/_search_modal.html.erb (0.5ms)
+  Rendered shared/_main_content.html.erb (1.4ms)
+  Rendered static_pages/index.html.erb within layouts/application (20.8ms)
+Completed 500 Internal Server Error in 664ms (ActiveRecord: 0.0ms)
+
+
+
+Sass::SyntaxError - File to import not found or unreadable: base/colors.scss.
+Load paths:
+  /home/luu/aA-daywork/W4D3/aa_times/app/assets/images
+  /home/luu/aA-daywork/W4D3/aa_times/app/assets/javascripts
+  /home/luu/aA-daywork/W4D3/aa_times/app/assets/stylesheets
+  /home/luu/aA-daywork/W4D3/aa_times/vendor/assets/javascripts
+  /home/luu/aA-daywork/W4D3/aa_times/vendor/assets/stylesheets
+  /var/lib/gems/2.3.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /var/lib/gems/2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /var/lib/gems/2.3.0/gems/actioncable-5.0.6/lib/assets/compiled:
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___3780974470313397650_47409213164040'
+
+Started POST "/__better_errors/eb389f230cf3e873/variables" for ::1 at 2018-02-10 13:49:13 -0800
+Started GET "/" for ::1 at 2018-02-10 13:53:08 -0800
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_sections_sidebar.html.erb (0.9ms)
+  Rendered shared/_gear_dropdown.html.erb (0.4ms)
+  Rendered shared/_main_nav.html.erb (6.0ms)
+  Rendered shared/_masthead.html.erb (0.5ms)
+  Rendered shared/_sections_nav.html.erb (1.0ms)
+  Rendered shared/_search_modal.html.erb (0.3ms)
+  Rendered shared/_main_content.html.erb (0.8ms)
+  Rendered static_pages/index.html.erb within layouts/application (19.9ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+
+
+
+Sass::SyntaxError - File to import not found or unreadable: base/colors.scss.
+Load paths:
+  /home/luu/aA-daywork/W4D3/aa_times/app/assets/images
+  /home/luu/aA-daywork/W4D3/aa_times/app/assets/javascripts
+  /home/luu/aA-daywork/W4D3/aa_times/app/assets/stylesheets
+  /home/luu/aA-daywork/W4D3/aa_times/vendor/assets/javascripts
+  /home/luu/aA-daywork/W4D3/aa_times/vendor/assets/stylesheets
+  /var/lib/gems/2.3.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /var/lib/gems/2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /var/lib/gems/2.3.0/gems/actioncable-5.0.6/lib/assets/compiled:
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___3780974470313397650_69852995166420'
+
+Started POST "/__better_errors/1aac9e95a35a464d/variables" for ::1 at 2018-02-10 13:53:09 -0800
+Started GET "/" for ::1 at 2018-02-10 13:53:14 -0800
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_sections_sidebar.html.erb (0.6ms)
+  Rendered shared/_gear_dropdown.html.erb (1.3ms)
+  Rendered shared/_main_nav.html.erb (6.3ms)
+  Rendered shared/_masthead.html.erb (0.7ms)
+  Rendered shared/_sections_nav.html.erb (0.5ms)
+  Rendered shared/_search_modal.html.erb (0.4ms)
+  Rendered shared/_main_content.html.erb (1.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (15.2ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.0ms)
+
+
+
+Sass::SyntaxError - File to import not found or unreadable: base/colors.scss.
+Load paths:
+  /home/luu/aA-daywork/W4D3/aa_times/app/assets/images
+  /home/luu/aA-daywork/W4D3/aa_times/app/assets/javascripts
+  /home/luu/aA-daywork/W4D3/aa_times/app/assets/stylesheets
+  /home/luu/aA-daywork/W4D3/aa_times/vendor/assets/javascripts
+  /home/luu/aA-daywork/W4D3/aa_times/vendor/assets/stylesheets
+  /var/lib/gems/2.3.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /var/lib/gems/2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /var/lib/gems/2.3.0/gems/actioncable-5.0.6/lib/assets/compiled:
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___3780974470313397650_69852879114020'
+
+Started POST "/__better_errors/2d7e60f4017c3066/variables" for ::1 at 2018-02-10 13:53:15 -0800
+Started GET "/" for ::1 at 2018-02-10 13:53:40 -0800
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_sections_sidebar.html.erb (0.5ms)
+  Rendered shared/_gear_dropdown.html.erb (0.4ms)
+  Rendered shared/_main_nav.html.erb (5.0ms)
+  Rendered shared/_masthead.html.erb (1.7ms)
+  Rendered shared/_sections_nav.html.erb (0.5ms)
+  Rendered shared/_search_modal.html.erb (1.5ms)
+  Rendered shared/_main_content.html.erb (3.4ms)
+  Rendered static_pages/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 368ms (Views: 365.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-73739f928e6a6f01ac3fede0e873b90b7c566933bf21495cd5fc11d0d4d9c90d.css?body=1" for ::1 at 2018-02-10 13:53:41 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2018-02-10 13:53:41 -0800
+Started GET "/assets/components/dropdown.self-815016af6fab1d5b72abd319213bf62f0c42bab2c585d2e059543ae704a0d74c.js?body=1" for ::1 at 2018-02-10 13:53:41 -0800
+Started GET "/assets/application.self-f571b9db02bf4ed04c38a6a29072ac382f7d4f47db1fab9817aeadb0d8665235.js?body=1" for ::1 at 2018-02-10 13:53:41 -0800
+Started GET "/assets/components/sidebar.self-f4c554a199004e8efc4782e1af4fbc7ea2bf9ca4c4344e054f21afdc7ed2e196.js?body=1" for ::1 at 2018-02-10 13:53:41 -0800
+Started GET "/assets/components/modal.self-04f115a30fb768c0b085f1a08a11f4ab5ce2817cbb5fde8763d14959f0b03584.js?body=1" for ::1 at 2018-02-10 13:53:41 -0800
+Started GET "/assets/AA_Times_Logo.png" for ::1 at 2018-02-10 13:53:41 -0800
+Started GET "/assets/new_office.jpg" for ::1 at 2018-02-10 13:53:41 -0800
+Started GET "/" for ::1 at 2018-02-10 13:58:18 -0800
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /var/lib/gems/2.3.0/gems/activerecord-5.0.6/lib/active_record/railtie.rb:113)
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_sections_sidebar.html.erb (0.3ms)
+  Rendered shared/_gear_dropdown.html.erb (0.3ms)
+  Rendered shared/_main_nav.html.erb (2.1ms)
+  Rendered shared/_masthead.html.erb (0.3ms)
+  Rendered shared/_sections_nav.html.erb (0.3ms)
+  Rendered shared/_search_modal.html.erb (0.2ms)
+  Rendered shared/_main_content.html.erb (0.4ms)
+  Rendered static_pages/index.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 383ms (ActiveRecord: 0.0ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "...ing: border-box": expected "{", was ";":
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___86320739101256610_47213901613180'
+
+Started POST "/__better_errors/334d393f0bf3ebab/variables" for ::1 at 2018-02-10 13:58:20 -0800
+Started GET "/" for ::1 at 2018-02-10 14:10:07 -0800
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /var/lib/gems/2.3.0/gems/activerecord-5.0.6/lib/active_record/railtie.rb:113)
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_sections_sidebar.html.erb (2.0ms)
+  Rendered shared/_gear_dropdown.html.erb (0.5ms)
+  Rendered shared/_main_nav.html.erb (7.4ms)
+  Rendered shared/_masthead.html.erb (1.0ms)
+  Rendered shared/_sections_nav.html.erb (0.9ms)
+  Rendered shared/_search_modal.html.erb (0.9ms)
+  Rendered shared/_main_content.html.erb (0.9ms)
+  Rendered static_pages/index.html.erb within layouts/application (24.5ms)
+Completed 500 Internal Server Error in 555ms (ActiveRecord: 0.0ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "...ing: border-box": expected "{", was ";":
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___4558693848368225006_47210187431060'
+
+Started POST "/__better_errors/b09b14433839ab38/variables" for ::1 at 2018-02-10 14:10:08 -0800
+Started GET "/" for ::1 at 2018-02-10 14:11:08 -0800
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_sections_sidebar.html.erb (0.5ms)
+  Rendered shared/_gear_dropdown.html.erb (0.3ms)
+  Rendered shared/_main_nav.html.erb (4.6ms)
+  Rendered shared/_masthead.html.erb (0.3ms)
+  Rendered shared/_sections_nav.html.erb (0.4ms)
+  Rendered shared/_search_modal.html.erb (1.4ms)
+  Rendered shared/_main_content.html.erb (2.0ms)
+  Rendered static_pages/index.html.erb within layouts/application (17.3ms)
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 0.0ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "-  float: left": expected "{", was ";":
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___4558693848368225006_70132703893260'
+
+Started POST "/__better_errors/1dad7e84d4aefb04/variables" for ::1 at 2018-02-10 14:11:09 -0800
+Started GET "/" for ::1 at 2018-02-10 14:12:01 -0800
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_sections_sidebar.html.erb (0.5ms)
+  Rendered shared/_gear_dropdown.html.erb (0.4ms)
+  Rendered shared/_main_nav.html.erb (2.9ms)
+  Rendered shared/_masthead.html.erb (0.4ms)
+  Rendered shared/_sections_nav.html.erb (0.3ms)
+  Rendered shared/_search_modal.html.erb (1.0ms)
+  Rendered shared/_main_content.html.erb (0.7ms)
+  Rendered static_pages/index.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "...ing: border-box": expected "{", was ";":
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___4558693848368225006_70132702123120'
+
+Started POST "/__better_errors/346cc913df39e6f2/variables" for ::1 at 2018-02-10 14:12:02 -0800
